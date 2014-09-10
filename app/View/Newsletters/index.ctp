@@ -8,7 +8,10 @@
         <th>Id</th>
         <th>Title</th>
         <th>link</th>
+        <th>Created</th>
         <th>Actions</th>
+
+
     </tr>
 
 <!-- Here's where we loop through our $posts array, printing out post info -->
@@ -28,6 +31,14 @@
             <?php
                 echo $this->Html->link(
                     $newsletter['Newsletter']['link'],$newsletter['Newsletter']['link'],
+                    array()
+                );
+            ?>            
+        </td>
+        <td>
+            <?php
+                echo $this->Html->link(
+                    $newsletter['Newsletter']['created'],$newsletter['Newsletter']['created'],
                     array()
                 );
             ?>            
