@@ -13,17 +13,16 @@
   </script>
 </head>
 <body>
-
-<div id="accordion">
-  <?php foreach ($year as $yearkey=>$years): ?>
-   <h3><?php echo $yearkey;?></h3>
-   <div>
-     <?php foreach ($years as $month): ?>
-     	<p>
-        <?php echo $month;?>
-      </p>
-    <?php endforeach; ?>    
-  </div>   
-  <?php endforeach; ?>	  
-</div>
+  <div id="accordion">
+    <?php foreach ($year as $yearkey=>$years): ?>
+     <h3><?php echo $yearkey;?></h3>
+     <div>
+       <?php foreach ($years as $month): ?>
+       	<p>
+          <?php echo $month;?>
+        </p>
+      <?php endforeach; ?>    
+    </div>   
+    <?php endforeach; ?>	  
+  </div>
 </body>

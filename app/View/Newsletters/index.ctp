@@ -10,12 +10,9 @@
         <th>link</th>
         <th>Created</th>
         <th>Actions</th>
-
-
     </tr>
 
-<!-- Here's where we loop through our $posts array, printing out post info -->
-
+<!-- Here's where we loop through our $newsletters array, printing out newsletter info-->
     <?php foreach ($newsletters as $newsletter): ?>
     <tr>
         <td><?php echo $newsletter['Newsletter']['id']; ?></td>
@@ -28,10 +25,10 @@
             ?>
         </td>
         <td>
-            <?php
+            <?php $link=$newsletter['Newsletter']['link'];
                 echo $this->Html->link(
-                    $newsletter['Newsletter']['link'],$newsletter['Newsletter']['link'],
-                    array()
+                    $newsletter['Newsletter']['link'],'http://'.$link,
+                    array('target'=>'_blank','escape' => false)
                 );
             ?>            
         </td>
