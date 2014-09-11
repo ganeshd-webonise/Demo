@@ -49,7 +49,7 @@ class NewslettersController extends AppController {
 		          else
 		          {
 		          	
-		        	$year[$yr]=$this->create_month($yr);
+		        	$year[$yr]=$this->get_month($yr);
 		          }					      
 				}
 			}
@@ -57,7 +57,7 @@ class NewslettersController extends AppController {
 			$this->set('year',$year);
 	 }
 
-    public function create_month($yr)
+    public function get_month($yr)
     {
  		 $conditions['Newsletter.Created LIKE'] = $yr."%";
  		 $new=$this->Newsletter->find('all', array('conditions' => $conditions,'order' => array('Newsletter.Created DESC')));
